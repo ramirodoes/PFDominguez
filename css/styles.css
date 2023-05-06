@@ -34,7 +34,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  /* Estilo para el formulario */
+  /* Formulario */
   form {
     display: flex;
     flex-wrap: wrap;
@@ -75,7 +75,7 @@ h1 {
     background-color: #0D47A1;
   }
   
-  /* Estilo para la tabla */
+  /* TABLA */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -102,7 +102,7 @@ h1 {
     text-align: center;
   }
   
-  /* Estilo para el carrito */
+  /* CARRITO */
   #carrito {
     background-color: #f2f2f2;
     padding: 20px;
