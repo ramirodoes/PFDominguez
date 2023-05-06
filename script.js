@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const productoElegido = selectProducto.value;
     const cantidadElegida = parseInt(inputCantidad.value);
     const precio = selectProducto.options[selectProducto.selectedIndex].innerText.match(/\d+/)[0];
+    const imagenProducto = selectProducto.options[selectProducto.selectedIndex].getAttribute('data-imagen');
     const productoEnCarrito = carrito.find(item => item.producto === productoElegido);
 
     if (productoEnCarrito) {
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function mostrarCarrito() {
     listaCarrito.innerHTML = "";
-
+  
     carrito.forEach(item => {
       const { producto, cantidad, precio } = item;
       const row = document.createElement("tr");
@@ -49,12 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
         <td>$${precio}</td>
         <td>$${cantidad * precio}</td>
         <td><button class="borrar-producto" data-producto="${producto}">X</button></td>
+        <td><img src="img/${producto}.jpg" alt="${producto}" width="50"></td>
       `;
       listaCarrito.appendChild(row);
     });
-
+  
     calcularTotal();
-  }
+  }  
 
   function calcularTotal() {
     let total = 0;
@@ -107,3 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
   botonVaciarCarrito.addEventListener("click", vaciarCarrito);
 
 });
+
+const imagen = document.createElement('img');
+  imagen.src = imagenProducto;
+  document.getElementById('carrito').appendChild(imagen);
