@@ -1,3 +1,4 @@
+(function() {
 document.addEventListener("DOMContentLoaded", function() {
 
   const selectProducto = document.getElementById("producto-elegido");
@@ -110,6 +111,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-const imagen = document.createElement('img');
-  imagen.src = imagenProducto;
-  document.getElementById('carrito').appendChild(imagen);
+fetch('datos.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+
+    const nombreProducto = data.producto1.nombre;
+    const precioProducto = data.producto1.precio;
+
+    console.log(nombreProducto);
+    console.log(precioProducto);
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });
+})();

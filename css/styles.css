@@ -1,13 +1,37 @@
-/* Estilo para el encabezado y párrafo */
+body {
+    background-color: rgba(9, 80, 9, 0.534);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+#escudo {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+  
+#escudo img {
+    max-width: 1000px;
+    height: auto;
+}
+  
+
+/* Encabezado */
 h1 {
-    font-size: 32px;
+    font-size: 70px;
     font-weight: bold;
     text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0%;
   }
   
   p {
-    font-size: 18px;
+    font-size: 21px;
+    text-align: center;
+    color: #ffffff;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   /* Estilo para el formulario */
@@ -123,4 +147,3 @@ h1 {
   .borrar-producto:hover {
     background-color: #b71c1c;
   }
-  

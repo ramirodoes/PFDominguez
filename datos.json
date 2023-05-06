@@ -1,0 +1,23 @@
+{
+    "producto1": {
+      "nombre": "Camiseta",
+      "precio": 1400,
+      "imagen": "img/Camiseta1.jpg"
+    },
+    "producto2": {
+      "nombre": "Camiseta Alternativa",
+      "precio": 1500,
+      "imagen": "img/Camiseta2.jpg"
+    },
+    "producto3": {
+      "nombre": "Buzo",
+      "precio": 2000,
+      "imagen": "img/Buzo.jpg"
+    },
+    "producto4": {
+      "nombre": "Chomba",
+      "precio": 900,
+      "imagen": "img/Chomba.jpg"
+    }
+  }
+  
